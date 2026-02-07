@@ -1,16 +1,38 @@
-# React + Vite
+# Waslah
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Waslah is a logistics web application designed to streamline personal shipping. It enables a full door-to-door delivery workflow, letting users schedule courier pickups directly from their homes and track packages to the final destination. Built as a System Analysis project, it focuses on optimizing the user flow from order placement to successful delivery.
 
-Currently, two official plugins are available:
+## Project Sections
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Admin Panel
+- **Purpose:** Central operations control for orders, drivers, and customers.
+- **Key Features:**
+  - **Manage Orders Status:** Review incoming orders, update progress (Quality Assurance ? Warehouse ? Driver ? Delivered), and visually track each order’s state.
+  - **Manage Driver Assignments:** Assign drivers to orders and monitor assignment status.
+  - **Manage Customers:** View customer complaints and initiate contact.
+- **Problems Solved:**
+  - Reduces operational confusion by centralizing all logistics decisions.
+  - Improves delivery accuracy by enforcing clear progress stages.
+  - Helps resolve customer issues faster through a dedicated troubleshooting view.
 
-## React Compiler
+### Driver Panel
+- **Purpose:** Daily workflow for drivers to handle assigned deliveries.
+- **Key Features:**
+  - View assigned orders with pickup/destination details.
+  - Accept or refuse delivery requests.
+  - Update delivery result (Delivered / Failed) in the Accepted Orders view.
+- **Problems Solved:**
+  - Speeds up driver decision-making with clear order details.
+  - Ensures delivery status is updated consistently and tracked by admins.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### User Panel
+- **Purpose:** Customer-facing experience for placing and tracking orders.
+- **Key Features:**
+  - **Place Order:** Submit pickup and destination details with contact info.
+  - **View Order:** Review order details before final confirmation.
+  - **Track Order:** Follow delivery progress in a timeline with receipt details.
+  - **Contact:** Submit issues to support through a simple form.
+- **Problems Solved:**
+  - Simplifies the order placement process with a structured form.
+  - Increases transparency by letting users track their delivery progress.
+  - Improves support communication with a direct issue submission flow.
