@@ -1,4 +1,4 @@
-# Waslah
+# Wassalha
 
 Waslah is a logistics web application designed to streamline personal shipping. It enables a full door-to-door delivery workflow, letting users schedule courier pickups directly from their homes and track packages to the final destination. Built as a System Analysis project, it focuses on optimizing the user flow from order placement to successful delivery.
 
@@ -7,7 +7,7 @@ Waslah is a logistics web application designed to streamline personal shipping. 
 ### Admin Panel
 - **Purpose:** Central operations control for orders, drivers, and customers.
 - **Key Features:**
-  - **Manage Orders Status:** Review incoming orders, update progress (Quality Assurance ? Warehouse ? Driver ? Delivered), and visually track each order’s state.
+  - **Manage Orders Status:** Review incoming orders, update progress (Quality Assurance ? Warehouse ? Driver ? Delivered), and visually track each orderâ€™s state.
   - **Manage Driver Assignments:** Assign drivers to orders and monitor assignment status.
   - **Manage Customers:** View customer complaints and initiate contact.
 - **Problems Solved:**
