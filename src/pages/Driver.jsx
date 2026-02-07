@@ -1,10 +1,11 @@
-import React from "react";
+﻿import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import {
   BsTruck,
   BsXCircleFill,
   BsCheckCircleFill,
   BsClipboardCheck,
+  BsArrowLeftCircle,
 } from "react-icons/bs";
 
 function Driver() {
@@ -24,17 +25,26 @@ function Driver() {
 
   return (
     <>
-      <div className="w-[99vw] min-h-screen bg-gray-100 py-10 mt-10">
+      <div className="w-full min-h-screen bg-gray-100 py-10 mt-10 px-4 sm:px-6">
+        <div className="mb-6 flex justify-start">
+          <Link
+            to="/login"
+            className="inline-flex items-center gap-2 rounded-xl border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 shadow-lg transition hover:bg-gray-100"
+          >
+            <BsArrowLeftCircle className="text-lg" />
+            Back to Login
+          </Link>
+        </div>
         {/* Header */}
-        <h1 className="text-4xl text-center font-extrabold bg-orange-500 text-white py-4 shadow-lg flex items-center justify-center gap-3">
-          <BsTruck className="text-white text-4xl" />
+        <h1 className="text-xl sm:text-2xl sm:text-3xl md:text-4xl text-center font-extrabold bg-orange-500 text-white py-4 shadow-lg flex items-center justify-center gap-3">
+          <BsTruck className="text-white text-xl sm:text-2xl sm:text-3xl md:text-4xl" />
           Driver Dashboard
         </h1>
 
         {/* Table Container */}
-        <div className="overflow-x-auto mt-16 px-8">
+        <div className="overflow-x-auto mt-8 md:mt-16 px-2 sm:px-6">
           <table className="w-full text-center border border-gray-300 shadow-xl bg-white rounded-xl overflow-hidden">
-            <thead className="bg-gray-200 text-lg font-semibold">
+            <thead className="bg-gray-200 text-sm sm:text-base md:text-lg font-semibold">
               <tr>
                 <th className="p-3 border">Order No</th>
                 <th className="p-3 border">Location</th>
@@ -98,7 +108,7 @@ function Driver() {
                   weight: "19.3 KG",
                 },
               ].map((row) => (
-                <tr key={row.no} className="border text-lg">
+                <tr key={row.no} className="border text-sm sm:text-base md:text-lg">
                   <td className="p-4 border">{row.no}</td>
                   <td className="p-4 border">{row.loc}</td>
                   <td className="p-4 border">{row.des}</td>
@@ -107,7 +117,7 @@ function Driver() {
                   <td className="p-4 border">{row.weight}</td>
 
                   <td className="p-4 border">
-                    <div className="flex justify-center gap-3">
+                    <div className="flex flex-col sm:flex-row justify-center gap-3">
                       {/* Refuse Button */}
                       <button
                         className="flex items-center gap-2 p-2 bg-red-600 text-white rounded-xl hover:bg-red-400 hover:scale-105 transition cursor-pointer"
@@ -139,9 +149,9 @@ function Driver() {
         <div className="flex justify-center mt-12">
           <Link
             to="/acceptedorders"
-            className="flex items-center gap-2 py-3 px-6 bg-orange-500 text-white text-xl rounded-2xl shadow-lg hover:bg-orange-400 hover:scale-105 transition"
+            className="flex items-center gap-2 py-3 px-6 bg-orange-500 text-white text-base sm:text-lg rounded-2xl shadow-lg hover:bg-orange-400 hover:scale-105 transition"
           >
-            <BsClipboardCheck className="text-2xl" />
+            <BsClipboardCheck className="text-xl sm:text-2xl" />
             View Accepted Orders
           </Link>
         </div>
@@ -151,3 +161,6 @@ function Driver() {
 }
 
 export default Driver;
+
+
+

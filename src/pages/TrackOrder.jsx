@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   BsMapFill,
@@ -29,7 +29,7 @@ function TrackOrder() {
       {/* Background Image with Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-5"
-        style={{ backgroundImage: "url(src/components/uploads/admin-bg.png)" }}
+        style={{ backgroundImage: "url(/uploads/admin-bg.png)" }}
       ></div>
 
       <div className="mt-10 relative z-10 container mx-auto px-6 py-12">
@@ -57,8 +57,8 @@ function TrackOrder() {
                   autoPlay
                   loop
                   muted
-                  className="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="src/components/uploads/Animated_Delivery_Tracking_Map.mp4"
+                  className="w-full h-[260px] sm:h-[360px] md:h-[500px] object-cover transition-transform duration-700 group-hover:scale-110"
+                  src="/uploads/Animated_Delivery_Tracking_Map.mp4"
                   alt="Delivery Map"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
@@ -103,7 +103,7 @@ function TrackOrder() {
                 {/* Customer Name */}
                 <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-all duration-300 border border-white/20">
                   <p className="text-white/70 text-sm mb-1">Name</p>
-                  <p className="text-white text-xl font-semibold">Abdo Sayed</p>
+                  <p className="text-white text-base sm:text-lg md:text-xl font-semibold">Abdo Sayed</p>
                 </div>
 
                 {/* Location */}
@@ -112,7 +112,7 @@ function TrackOrder() {
                     <BsMapFill className="w-4 h-4 text-white/70" />
                     <p className="text-white/70 text-sm">Location</p>
                   </div>
-                  <p className="text-white text-xl font-semibold">Helwan</p>
+                  <p className="text-white text-base sm:text-lg md:text-xl font-semibold">Helwan</p>
                 </div>
 
                 {/* Destination */}
@@ -121,7 +121,7 @@ function TrackOrder() {
                     <BsMapFill className="w-4 h-4 text-white/70" />
                     <p className="text-white/70 text-sm">Destination</p>
                   </div>
-                  <p className="text-white text-xl font-semibold">Alexandria</p>
+                  <p className="text-white text-base sm:text-lg md:text-xl font-semibold">Alexandria</p>
                 </div>
 
                 {/* Delivery Number */}
@@ -130,7 +130,7 @@ function TrackOrder() {
                     <BsTelephone className="w-4 h-4 text-white/70" />
                     <p className="text-white/70 text-sm">Delivery Number</p>
                   </div>
-                  <p className="text-white text-xl font-semibold">010369908</p>
+                  <p className="text-white text-base sm:text-lg md:text-xl font-semibold">010369908</p>
                 </div>
 
                 {/* Order Weight */}
@@ -139,7 +139,7 @@ function TrackOrder() {
                     <BsSpeedometer2 className="w-4 h-4 text-white/70" />
                     <p className="text-white/70 text-sm">Order Weight</p>
                   </div>
-                  <p className="text-white text-xl font-semibold">4.9 kg</p>
+                  <p className="text-white text-base sm:text-lg md:text-xl font-semibold">4.9 kg</p>
                 </div>
 
                 {/* Cost Breakdown */}
@@ -159,7 +159,7 @@ function TrackOrder() {
                     </div>
                     <div className="flex justify-between text-white pt-2">
                       <span className="text-lg font-bold">Total Cost</span>
-                      <span className="text-2xl font-bold">2,400.00 EGP</span>
+                      <span className="text-xl sm:text-2xl font-bold">2,400.00 EGP</span>
                     </div>
                   </div>
                 </div>
@@ -177,11 +177,11 @@ function TrackOrder() {
 
         {/* Status Timeline */}
         <div className="mt-8 bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl">
-          <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+          <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 flex items-center gap-3">
             <BsBoxSeam className="w-6 h-6 text-orange-400" />
             Delivery Timeline
           </h3>
-          <div className="grid md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { status: "Order Placed", active: true },
               { status: "In Transit", active: true },
@@ -264,3 +264,7 @@ function TrackOrder() {
 }
 
 export default TrackOrder;
+
+
+
+

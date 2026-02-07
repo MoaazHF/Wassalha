@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { BsBoxSeam, BsTruck, BsPeopleFill, BsArrowRight } from "react-icons/bs";
@@ -13,7 +13,7 @@ function Admin() {
       title: "Manage Orders",
       description: "Track and manage all customer orders",
       icon: BsBoxSeam,
-      image: "src/components/uploads/admin-manage-order.png",
+      image: "/uploads/admin-manage-order.png",
       link: "/managestatus",
       buttonText: "Manage",
       delay: 0.5,
@@ -23,7 +23,7 @@ function Admin() {
       description: "Assign drivers and track deliveries",
       icon: BsTruck,
       image:
-        "src/components/uploads/Manage Deliverycourier-delivery-couriers-using-map-cars-and_22841070.png",
+        "/uploads/Manage Deliverycourier-delivery-couriers-using-map-cars-and_22841070.png",
       link: "/managedriver",
       buttonText: "Set Driver",
       delay: 0.7,
@@ -33,7 +33,7 @@ function Admin() {
       description: "View and manage customer accounts",
       icon: BsPeopleFill,
       image:
-        "src/components/uploads/two-hands-that-say-ok-top-yellow-button_1082479-26365.png",
+        "/uploads/two-hands-that-say-ok-top-yellow-button_1082479-26365.png",
       link: "/managecustomers",
       buttonText: "Manage",
       delay: 0.9,
@@ -46,7 +46,7 @@ function Admin() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-5"
         style={{
-          backgroundImage: "url(src/components/uploads/admin-bg.png)",
+          backgroundImage: "url(/uploads/admin-bg.png)",
         }}
       />
 
@@ -72,7 +72,7 @@ function Admin() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mb-3"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mb-3"
             >
               Admin Dashboard
             </motion.h1>
@@ -80,7 +80,7 @@ function Admin() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-white/60 text-lg"
+              className="text-white/60 text-sm sm:text-base md:text-lg"
             >
               Manage your delivery system efficiently
             </motion.p>
@@ -185,3 +185,6 @@ function Admin() {
 }
 
 export default Admin;
+
+
+

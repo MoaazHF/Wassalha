@@ -1,21 +1,22 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import { motion } from "framer-motion";
-import { BsTelephoneFill, BsExclamationCircle } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { BsArrowLeftCircle, BsTelephoneFill, BsExclamationCircle } from "react-icons/bs";
 
 const complaints = [
   {
     name: "Abdo Mohammad",
-    img: "src/components/uploads/abdo-Mohammad.jpg",
+    img: "/uploads/abdo-Mohammad.jpg",
     text: '"The representative I spoke with sounded impatient and didn\'t provide clear guidance."',
   },
   {
     name: "Cristiano Ronaldo",
-    img: "src/components/uploads/cr7.jpg",
+    img: "/uploads/cr7.jpg",
     text: '"I contacted support three days ago but still haven\'t received a reply. I expected faster customer service."',
   },
   {
     name: "Tomas Alpha",
-    img: "src/components/uploads/personIsSad.jpg",
+    img: "/uploads/personIsSad.jpg",
     text: '"I waited over 20 minutes on live chat before anyone answered. This is too long."',
   },
 ];
@@ -32,13 +33,22 @@ function ManageCustomers() {
         className="absolute inset-0 bg-cover bg-center opacity-5"
         style={{
           backgroundImage:
-            "url(src/components/uploads/manage-customers-background.png)",
+            "url(/uploads/manage-customers-background.png)",
         }}
       />
 
       {/* Main Content */}
       <div className="relative mt-10 z-10 min-h-screen px-4 py-12">
         <div className="container mx-auto max-w-7xl">
+          <div className="mb-6 flex justify-start">
+            <Link
+              to="/admin"
+              className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-white/20"
+            >
+              <BsArrowLeftCircle className="text-lg" />
+              Back to Admin
+            </Link>
+          </div>
           {/* Header */}
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -58,7 +68,7 @@ function ManageCustomers() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mb-3"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent mb-3"
             >
               Customer Troubleshooting
             </motion.h1>
@@ -66,7 +76,7 @@ function ManageCustomers() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-white/60 text-lg"
+              className="text-white/60 text-sm sm:text-base md:text-lg"
             >
               Review and respond to customer complaints
             </motion.p>
@@ -138,3 +148,6 @@ function ManageCustomers() {
 }
 
 export default ManageCustomers;
+
+
+

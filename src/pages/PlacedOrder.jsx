@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { Link, Links } from "react-router-dom";
+﻿import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   BsPerson,
   BsEnvelope,
   BsTelephone,
   BsGeoAlt,
   BsArrowRightCircle,
+  BsArrowLeftCircle,
 } from "react-icons/bs";
 import { motion } from "framer-motion";
 
@@ -57,12 +58,21 @@ function PlacedOrder() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-100 to-orange-300 py-20 px-6">
+      <div className="mb-6 flex justify-start">
+        <Link
+          to="/login"
+          className="inline-flex items-center gap-2 rounded-xl border border-orange-300/60 bg-white/40 px-4 py-2 text-sm font-semibold text-orange-700 shadow-lg transition hover:bg-white/70"
+        >
+          <BsArrowLeftCircle className="text-lg" />
+          Back to Login
+        </Link>
+      </div>
       {/* Header */}
       <motion.h1
         initial={{ opacity: 0, y: -25 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4 }}
-        className="text-5xl font-extrabold text-center bg-gradient-to-r from-orange-600 to-red-500 bg-clip-text text-transparent drop-shadow-xl"
+        className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center bg-gradient-to-r from-orange-600 to-red-500 bg-clip-text text-transparent drop-shadow-xl"
       >
         Place Your Delivery Order
       </motion.h1>
@@ -71,9 +81,9 @@ function PlacedOrder() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.15 }}
-        className="text-center text-gray-700 mt-3 text-lg"
+        className="text-center text-gray-700 mt-3 text-sm sm:text-base md:text-lg"
       >
-        Fast • Secure • Reliable — Enter your details to schedule your delivery
+        Fast • Secure • Reliable - Enter your details to schedule your delivery
       </motion.p>
 
       {/* Form Card */}
@@ -81,7 +91,7 @@ function PlacedOrder() {
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.45 }}
-        className="max-w-3xl mx-auto mt-14 bg-white/80 backdrop-blur-xl p-10 rounded-3xl shadow-2xl border border-white/40"
+        className="max-w-3xl mx-auto mt-14 bg-white/80 backdrop-blur-xl p-6 sm:p-8 md:p-10 rounded-3xl shadow-2xl border border-white/40"
       >
         <form onSubmit={handleForm} className="space-y-7">
           {/* First + Last name */}
@@ -248,7 +258,7 @@ function PlacedOrder() {
             whileTap={{ scale: 0.9 }}
             type="submit"
             className="mt-6 flex items-center gap-3 mx-auto px-8 py-3 bg-orange-600 text-white 
-                       rounded-full shadow-lg hover:bg-orange-700 transition text-xl"
+                       rounded-full shadow-lg hover:bg-orange-700 transition text-base sm:text-lg"
           >
             <Link to={"/vieworder"}>Submit Order</Link>
             <BsArrowRightCircle size={28} />
@@ -260,3 +270,7 @@ function PlacedOrder() {
 }
 
 export default PlacedOrder;
+
+
+
+

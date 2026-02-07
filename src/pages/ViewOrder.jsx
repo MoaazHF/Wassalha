@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   BsMapFill,
@@ -40,7 +40,7 @@ function ViewOrder() {
       {/* ---------------- Background Image ---------------- */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-5"
-        style={{ backgroundImage: "url(src/components/uploads/admin-bg.png)" }}
+        style={{ backgroundImage: "url(/uploads/admin-bg.png)" }}
       ></div>
 
       {/* ---------------- Page Wrapper ---------------- */}
@@ -127,7 +127,7 @@ function ViewOrder() {
                     )}
                     <p>{item.label}</p>
                   </div>
-                  <p className="text-xl font-semibold">{item.value}</p>
+                  <p className="text-base sm:text-lg md:text-xl font-semibold">{item.value}</p>
                 </motion.div>
               ))}
 
@@ -156,7 +156,7 @@ function ViewOrder() {
 
                   <div className="flex justify-between text-white pt-2">
                     <span className="text-lg font-bold">Total Cost</span>
-                    <span className="text-2xl font-bold">2400.00 EGP</span>
+                    <span className="text-xl sm:text-2xl font-bold">2400.00 EGP</span>
                   </div>
                 </div>
               </motion.div>
@@ -167,14 +167,14 @@ function ViewOrder() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1 }}
-              className="mt-8 flex gap-4"
+              className="mt-8 flex flex-col sm:flex-row gap-4"
             >
               {/* Keep Order */}
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.92 }}
                 onClick={() => navigate("/placedorder")}
-                className="w-1/2 bg-white text-orange-600 
+                className="w-full sm:w-1/2 bg-white text-orange-600 
                            font-bold py-4 rounded-xl 
                            shadow-lg hover:shadow-xl transition"
               >
@@ -189,7 +189,7 @@ function ViewOrder() {
                   alert("The Order Will Reach The Destination Soon!");
                   navigate("/track");
                 }}
-                className="w-1/2 bg-green-600 text-white 
+                className="w-full sm:w-1/2 bg-green-600 text-white 
                            font-bold py-4 rounded-xl
                            shadow-lg hover:bg-green-500 transition"
               >
@@ -204,3 +204,7 @@ function ViewOrder() {
 }
 
 export default ViewOrder;
+
+
+
+

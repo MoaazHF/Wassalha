@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { motion } from "framer-motion";
 
@@ -9,28 +9,28 @@ function Documentation() {
 
   // Slides (Same images: DO NOT CHANGE)
   const slides = [
-    { src: "src/components/uploads/Diagrams/1.png" },
-    { src: "src/components/uploads/Diagrams/2.png" },
-    { src: "src/components/uploads/Diagrams/3.png" },
-    { src: "src/components/uploads/Diagrams/4.png" },
-    { src: "src/components/uploads/Diagrams/5.png" },
-    { src: "src/components/uploads/Diagrams/6.png" },
-    { src: "src/components/uploads/Diagrams/7.png" },
-    { src: "src/components/uploads/Diagrams/8.png" },
-    { src: "src/components/uploads/Diagrams/9.png" },
+    { src: "/uploads/Diagrams/1.png" },
+    { src: "/uploads/Diagrams/2.png" },
+    { src: "/uploads/Diagrams/3.png" },
+    { src: "/uploads/Diagrams/4.png" },
+    { src: "/uploads/Diagrams/5.png" },
+    { src: "/uploads/Diagrams/6.png" },
+    { src: "/uploads/Diagrams/7.png" },
+    { src: "/uploads/Diagrams/8.png" },
+    { src: "/uploads/Diagrams/9.png" },
   ];
 
   const dataflowSlides = [
-    { src: "src/components/uploads/Diagrams/DataFlow.jpeg" },
-    { src: "src/components/uploads/Diagrams/DataFlow1.jpeg" },
+    { src: "/uploads/Diagrams/DataFlow.jpeg" },
+    { src: "/uploads/Diagrams/DataFlow1.jpeg" },
   ];
 
   const saadSlides = [
-    { src: "src/components/uploads/Diagrams/SAAD/image1.png" },
-    { src: "src/components/uploads/Diagrams/SAAD/image2.png" },
-    { src: "src/components/uploads/Diagrams/SAAD/image3.png" },
-    { src: "src/components/uploads/Diagrams/SAAD/image4.png" },
-    { src: "src/components/uploads/Diagrams/SAAD/image5.png" },
+    { src: "/uploads/Diagrams/SAAD/image1.png" },
+    { src: "/uploads/Diagrams/SAAD/image2.png" },
+    { src: "/uploads/Diagrams/SAAD/image3.png" },
+    { src: "/uploads/Diagrams/SAAD/image4.png" },
+    { src: "/uploads/Diagrams/SAAD/image5.png" },
   ];
 
   // States
@@ -77,12 +77,12 @@ function Documentation() {
         {
           title: "Mostafa Mahmoud Mattar",
           subtitle: "Use Case Diagram",
-          img: "src/components/uploads/Diagrams/UseCase.jpeg",
+          img: "/uploads/Diagrams/UseCase.jpeg",
         },
         {
           title: "Hazem Ahmad Abdullah",
           subtitle: "Class Diagram",
-          img: "src/components/uploads/Diagrams/ActivityDiagram.png",
+          img: "/uploads/Diagrams/ActivityDiagram.png",
         },
       ].map((section, i) => (
         <motion.div
@@ -92,10 +92,10 @@ function Documentation() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
         >
-          <h1 className="text-4xl mt-15 font-extrabold bg-gradient-to-r from-orange-200 via-orange-400 to-orange-600 bg-clip-text text-transparent">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl mt-15 font-extrabold bg-gradient-to-r from-orange-200 via-orange-400 to-orange-600 bg-clip-text text-transparent">
             {section.title}
           </h1>
-          <h2 className="text-2xl text-orange-600">{section.subtitle}</h2>
+          <h2 className="text-lg sm:text-xl md:text-2xl text-orange-600">{section.subtitle}</h2>
 
           <img
             src={section.img}
@@ -110,10 +110,10 @@ function Documentation() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center space-y-4"
       >
-        <h1 className="text-4xl font-extrabold bg-gradient-to-r from-orange-200 via-orange-400 to-orange-600 bg-clip-text text-transparent">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-orange-200 via-orange-400 to-orange-600 bg-clip-text text-transparent">
           Hossam Mohy
         </h1>
-        <h2 className="text-2xl text-orange-600">Activity Diagram</h2>
+        <h2 className="text-lg sm:text-xl md:text-2xl text-orange-600">Activity Diagram</h2>
 
         <div className="relative w-full max-w-[900px] mx-auto">
           <motion.div
@@ -151,10 +151,10 @@ function Documentation() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center space-y-4"
       >
-        <h1 className="text-4xl font-extrabold bg-gradient-to-r from-orange-200 via-orange-400 to-orange-600 bg-clip-text text-transparent">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-orange-200 via-orange-400 to-orange-600 bg-clip-text text-transparent">
           Youssef Hany Ibrahim
         </h1>
-        <h2 className="text-2xl text-orange-600">Dataflow Diagram</h2>
+        <h2 className="text-lg sm:text-xl md:text-2xl text-orange-600">Dataflow Diagram</h2>
 
         <div className="relative w-full max-w-[900px] mx-auto">
           <motion.div
@@ -190,10 +190,10 @@ function Documentation() {
         animate={{ opacity: 1, y: 0 }}
         className="text-center space-y-4"
       >
-        <h1 className="text-4xl font-extrabold bg-gradient-to-r from-orange-200 via-orange-400 to-orange-600 bg-clip-text text-transparent">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-orange-200 via-orange-400 to-orange-600 bg-clip-text text-transparent">
           Marwan Ibrahim Ali
         </h1>
-        <h2 className="text-2xl text-orange-600">Sequence Diagram</h2>
+        <h2 className="text-lg sm:text-xl md:text-2xl text-orange-600">Sequence Diagram</h2>
 
         <div className="relative w-full max-w-[1200px] mx-auto">
           <motion.div
@@ -227,3 +227,6 @@ function Documentation() {
 }
 
 export default Documentation;
+
+
+

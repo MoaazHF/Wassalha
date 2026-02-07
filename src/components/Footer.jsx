@@ -1,60 +1,76 @@
-import React from "react";
+﻿const contacts = [
+  {
+    label: "+20 1123456789",
+    icon: "/uploads/icons8-whatsapp.svg",
+    alt: "WhatsApp",
+  },
+  {
+    label: "wassalha@gmail.com",
+    icon: "/uploads/icons8-gmail-50.png",
+    alt: "Email",
+  },
+];
+
+const socialMedia = [
+  { icon: "/uploads/icons8-facebook.svg", alt: "Facebook" },
+  { icon: "/uploads/icons8-instagram.svg", alt: "Instagram" },
+  { icon: "/uploads/icons8-x-50.png", alt: "X" },
+];
+
+const coverage = [
+  "Cairo",
+  "Giza",
+  "Alexandria",
+  "Aswan",
+  "Qena",
+  "Sharm El-Sheikh",
+  "Damanhour",
+];
 
 function Footer() {
   return (
-    <>
-      <div className="w-[90vw] mx-auto my-10 p-10 bg-gray-200 rounded-2xl shadow-2xl">
-        <div className="grid grid-cols-3 border-t-2 border-gray-300 ">
-          <div className="text-center items-center justify-center mt-5">
-            <h1 className=" font-bold mb-2 text-2xl ">Contact us</h1>
-            <div className="mx-auto w-1/2 items-center">
-              <div className="flex items-center">
-                <img
-                  className="w-10"
-                  src="src/components/uploads/icons8-whatsapp.svg"
-                ></img>
-                <h3>+20 1123456789</h3>
-              </div>
-              <div className="flex items-center space-x-2.5 ">
-                <img
-                  className="w-8"
-                  src="src/components/uploads/icons8-gmail-50.png"
-                ></img>
-                <h2 className="font-bold">wassalha@gmail.com</h2>
-              </div>
-            </div>
-          </div>
-          <div className="border-l-2  border-gray-300 text-center items-center justify-center mt-5">
-            <h1 className="font-bold mb-2 text-2xl mx-auto">Scocial Media</h1>
-            <div className=" mx-auto w-1/4 items-center">
+    <footer className="mx-auto my-10 w-[90vw] rounded-2xl bg-gray-200 p-6 shadow-2xl md:p-10">
+      <div className="grid gap-8 border-t-2 border-gray-300 pt-6 md:grid-cols-3">
+        <div className="text-center md:text-left">
+          <h2 className="mb-4 text-2xl font-bold">Contact us</h2>
+          <ul className="space-y-3">
+            {contacts.map((item) => (
+              <li key={item.label} className="flex items-center gap-3">
+                <img className="h-8 w-8" src={item.icon} alt={item.alt} />
+                <span className="text-sm font-medium text-gray-700">
+                  {item.label}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="text-center">
+          <h2 className="mb-4 text-2xl font-bold">Social Media</h2>
+          <div className="flex items-center justify-center gap-4">
+            {socialMedia.map((item) => (
               <img
-                className="w-10"
-                src="src/components/uploads/icons8-facebook.svg"
-              ></img>
-              <img
-                className="w-10"
-                src="src/components/uploads/icons8-instagram.svg"
-              ></img>
-              <img
-                className="w-10"
-                src="src/components/uploads/icons8-x-50.png"
-              ></img>
-            </div>
-          </div>
-          <div className="border-l-2 border-gray-300 text-center mt-5">
-            <h1 className=" font-bold mx-auto text-2xl mb-2">Coverage</h1>
-            <h3>Cairo</h3>
-            <h3>Giza</h3>
-            <h3>Alexandria</h3>
-            <h3>Aswan</h3>
-            <h3>Qena</h3>
-            <h3>Sharm El-Sheikh</h3>
-            <h3>Damanhour</h3>
+                key={item.alt}
+                className="h-9 w-9"
+                src={item.icon}
+                alt={item.alt}
+              />
+            ))}
           </div>
         </div>
+
+        <div className="text-center md:text-left">
+          <h2 className="mb-4 text-2xl font-bold">Coverage</h2>
+          <ul className="space-y-1 text-sm text-gray-700">
+            {coverage.map((city) => (
+              <li key={city}>{city}</li>
+            ))}
+          </ul>
+        </div>
       </div>
-    </>
+    </footer>
   );
 }
 
 export default Footer;
+

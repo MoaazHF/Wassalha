@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -45,12 +45,12 @@ function Login() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-5"
         style={{
-          backgroundImage: "url(src/components/uploads/orderNow_bg.png)",
+          backgroundImage: "url(/uploads/orderNow_bg.png)",
         }}
       />
 
       {/* Main Content */}
-      <div className="relative z-10 mt-10 min-h-screen flex items-center  justify-center px-4 py-12">
+      <div className="relative z-10 mt-10 min-h-screen flex items-center justify-center px-4 py-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -245,7 +245,7 @@ function Login() {
               <p className="text-white/60 text-xs text-center mb-2">
                 Demo Credentials:
               </p>
-              <div className="grid grid-cols-3 gap-2 text-xs">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs">
                 <div className="text-center">
                   <p className="text-orange-400 font-semibold mb-1">Admin</p>
                   <p className="text-white/60">admin@email.com</p>
@@ -271,3 +271,6 @@ function Login() {
 }
 
 export default Login;
+
+
+

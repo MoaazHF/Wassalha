@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { BsTruck, BsPersonCheckFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { BsArrowLeftCircle, BsTruck, BsPersonCheckFill } from "react-icons/bs";
 
 function ManageDriver() {
   const [orders, setOrders] = useState([]);
@@ -47,10 +48,19 @@ function ManageDriver() {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Soft background texture */}
-      <div className="absolute inset-0 opacity-10 bg-[url('src/components/uploads/manage-background.png')] bg-cover bg-center" />
+      <div className="absolute inset-0 opacity-10 bg-[url('/uploads/manage-background.png')] bg-cover bg-center" />
 
       {/* Main Content */}
       <div className="relative mt-10 z-10 px-4 py-16 max-w-7xl mx-auto">
+        <div className="mb-6 flex justify-start">
+          <Link
+            to="/admin"
+            className="inline-flex items-center gap-2 rounded-xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-semibold text-white shadow-lg transition hover:bg-white/20"
+          >
+            <BsArrowLeftCircle className="text-lg" />
+            Back to Admin
+          </Link>
+        </div>
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -25 }}
@@ -67,11 +77,11 @@ function ManageDriver() {
             <BsPersonCheckFill className="w-10 h-10 text-white" />
           </motion.div>
 
-          <h1 className="text-5xl font-extrabold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent drop-shadow-lg">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 bg-clip-text text-transparent drop-shadow-lg">
             Assign Drivers
           </h1>
 
-          <p className="text-white/60 mt-2 text-lg">
+          <p className="text-white/60 mt-2 text-sm sm:text-base md:text-lg">
             Manage driver assignments for each order
           </p>
         </motion.div>
@@ -173,3 +183,7 @@ function ManageDriver() {
 }
 
 export default ManageDriver;
+
+
+
+

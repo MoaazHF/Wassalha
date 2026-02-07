@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+﻿import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   BsTruck,
@@ -23,17 +23,17 @@ function DriverAcceptedOrders() {
 
   return (
     <>
-      <div className="w-[99vw] min-h-screen bg-gray-100 py-10">
+      <div className="w-full min-h-screen bg-gray-100 py-10 px-4 sm:px-6">
         {/* Header */}
-        <h1 className="text-4xl text-center mt-10 font-extrabold bg-amber-500 text-white py-4 shadow-lg flex justify-center gap-3 items-center">
-          <BsTruck className="text-4xl" />
+        <h1 className="text-2xl sm:text-3xl md:text-4xl text-center mt-10 font-extrabold bg-amber-500 text-white py-4 shadow-lg flex justify-center gap-3 items-center">
+          <BsTruck className="text-2xl sm:text-3xl md:text-4xl" />
           Delivery Status Dashboard
         </h1>
 
         {/* Table Container */}
-        <div className="overflow-x-auto mt-16 px-8">
+        <div className="overflow-x-auto mt-8 md:mt-16 px-2 sm:px-6">
           <table className="w-full text-center border border-gray-300 shadow-xl bg-white rounded-xl overflow-hidden">
-            <thead className="bg-gray-200 text-lg font-semibold">
+            <thead className="bg-gray-200 text-sm sm:text-base md:text-lg font-semibold">
               <tr>
                 <th className="p-3 border">Order No</th>
                 <th className="p-3 border">Location</th>
@@ -72,7 +72,7 @@ function DriverAcceptedOrders() {
                   weight: "2 KG",
                 },
               ].map((row) => (
-                <tr key={row.no} className="border text-lg">
+                <tr key={row.no} className="border text-sm sm:text-base md:text-lg">
                   <td className="p-4 border">{row.no}</td>
                   <td className="p-4 border">{row.loc}</td>
                   <td className="p-4 border">{row.des}</td>
@@ -81,7 +81,7 @@ function DriverAcceptedOrders() {
                   <td className="p-4 border">{row.weight}</td>
 
                   <td className="p-4 border">
-                    <div className="flex justify-center gap-3">
+                    <div className="flex flex-col sm:flex-row justify-center gap-3">
                       {/* Failed Button */}
                       <button
                         className="flex items-center gap-2 p-2 bg-red-600 text-white rounded-xl hover:bg-red-400 hover:scale-105 transition cursor-pointer"
@@ -113,9 +113,9 @@ function DriverAcceptedOrders() {
         <div className="flex justify-center mt-12">
           <Link
             to="/driver"
-            className="flex items-center gap-2 py-3 px-6 bg-black text-white text-xl rounded-2xl shadow-lg hover:bg-gray-700 hover:scale-105 transition"
+            className="flex items-center gap-2 py-3 px-6 bg-black text-white text-base sm:text-lg rounded-2xl shadow-lg hover:bg-gray-700 hover:scale-105 transition"
           >
-            <BsArrowLeftCircle className="text-2xl" />
+            <BsArrowLeftCircle className="text-xl sm:text-2xl" />
             Back
           </Link>
         </div>
@@ -125,3 +125,6 @@ function DriverAcceptedOrders() {
 }
 
 export default DriverAcceptedOrders;
+
+
+
