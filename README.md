@@ -1,4 +1,4 @@
-# Wasslha Logistics UI
+# Wassalha Logistics UI
 
 Frontend for a System Analysis course project that simulates a logistics workflow across three roles: `Admin`, `User`, and `Driver`.
 
