@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import { BsArrowLeftCircle, BsTruck, BsPersonCheckFill } from "react-icons/bs";
 
 function ManageDriver() {
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState(() => {
+    const savedOrders = JSON.parse(localStorage.getItem("orders")) || [];
+    return savedOrders;
+  });
   const drivers = ["Tommy", "Michel", "Kareem"];
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
-
-    const savedOrders = JSON.parse(localStorage.getItem("orders")) || [];
-    setOrders(savedOrders);
   }, []);
 
   const assignDriver = (index, driverName) => {

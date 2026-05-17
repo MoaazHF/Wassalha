@@ -8,7 +8,10 @@ function ManageStatus() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState(() => {
+    const savedOrders = JSON.parse(localStorage.getItem("orders")) || [];
+    return savedOrders;
+  });
 
   const progressImages = {
     qualityAssurance:
@@ -25,11 +28,6 @@ function ManageStatus() {
     driver: "Driver",
     delivered: "Delivered",
   };
-
-  useEffect(() => {
-    const savedOrders = JSON.parse(localStorage.getItem("orders")) || [];
-    setOrders(savedOrders);
-  }, []);
 
   const updateProgress = (index, newStatus) => {
     const updated = [...orders];

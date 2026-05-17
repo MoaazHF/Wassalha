@@ -1,21 +1,16 @@
-﻿import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+﻿import React, { useEffect } from "react";
 import {
   BsMapFill,
   BsBoxSeam,
   BsCurrencyDollar,
   BsSpeedometer2,
   BsTelephone,
-  Bs0CircleFill,
 } from "react-icons/bs";
 
 function TrackOrder() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
-
-  const navigate = useNavigate();
-  const [hoveredSection, setHoveredSection] = useState(null);
 
   return (
     <div className=" min-h-screen w-full bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -46,11 +41,7 @@ function TrackOrder() {
         {/* Main Content Grid */}
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Map Section */}
-          <div
-            className="lg:col-span-2 group"
-            onMouseEnter={() => setHoveredSection("map")}
-            onMouseLeave={() => setHoveredSection(null)}
-          >
+          <div className="lg:col-span-2 group">
             <div className="bg-white/10 backdrop-blur-xl rounded-3xl p-2 border border-white/20 shadow-2xl hover:shadow-orange-500/30 transition-all duration-500 hover:scale-[1.02]">
               <div className="relative overflow-hidden rounded-2xl">
                 <video
@@ -80,11 +71,7 @@ function TrackOrder() {
           </div>
 
           {/* Receipt Section */}
-          <div
-            className="lg:col-span-1"
-            onMouseEnter={() => setHoveredSection("receipt")}
-            onMouseLeave={() => setHoveredSection(null)}
-          >
+          <div className="lg:col-span-1">
             <div className="bg-gradient-to-br from-orange-500/90 to-orange-600/90 backdrop-blur-xl rounded-3xl p-8 shadow-2xl border border-orange-400/50 hover:shadow-orange-500/50 transition-all duration-500 hover:scale-[1.02]">
               {/* Receipt Header */}
               <div className="mb-6 pb-6 border-b-2 border-dashed border-white/40">
